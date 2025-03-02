@@ -6,11 +6,25 @@ import vueDevTools from 'vite-plugin-vue-devtools'
 import VueRouter from 'unplugin-vue-router/vite'
 import autoprefixer from 'autoprefixer'
 import tailwind from 'tailwindcss'
+import AutoImport from 'unplugin-auto-import/vite'
 
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [
     VueRouter(),
+    AutoImport({ 
+      include: [
+        /\.[tj]sx?$/, // .ts, .tsx, .js, .jsx
+        /\.vue$/,
+        /\.vue\?vue/, // .vue
+        /\.md$/, // .md
+      ],
+      imports: [
+        'vue',
+        'vue-router',
+      ],
+      dts: true,
+    }),
     vue({
       template: {
         compilerOptions: {

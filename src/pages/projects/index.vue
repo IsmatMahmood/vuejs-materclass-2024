@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { supabase } from '@/lib/supabaseClient'
-import { h, ref } from 'vue'
+
 import type { Tables } from '../../../database/types'
 import type { ColumnDef } from '@tanstack/vue-table'
 import DataTable from '@/components/ui/data-table/DataTable.vue'
@@ -14,7 +14,6 @@ const projects = ref<Tables<'projects'>[] | null>(null)
 
   projects.value = data
 
-  console.log('projects: ', projects.value)
 })()
 
 const columns: ColumnDef<Tables<'projects'>>[] = [
