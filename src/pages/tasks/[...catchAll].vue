@@ -4,6 +4,6 @@
 
 <template>
     <div>
-      <h1>Projects - Catch All 404 Page</h1>
+      <h1>Tasks - Catch All 404 Page</h1>
     </div>
 </template>
