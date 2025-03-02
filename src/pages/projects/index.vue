@@ -10,7 +10,6 @@ const projects =  ref<Tables<'projects'>[] | null>(null)
 
   if (error) console.log(error)
   projects.value = data
-  console.log('Projects: ', projects.value)
 })()
 
 </script>
